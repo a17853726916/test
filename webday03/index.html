@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <title>模板文件</title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <!--嵌入动作-->
+        <!--{{if .}}
+            你已经成年
+        {{else}}
+            你没成年
+        {{end}} -->
+
+        <!-- 迭代结构体 -->
+        <!-- {{range .}}
+            <a href="#">{{.Name}}</a>
+        {{else}}
+            没有数据
+        {{end}} -->
+
+        <div>得到的数据是：{{.}}</div>
+        {{with "太子"}}
+        <div>替换之后的数据是：{{.}}</div>
+        {{end}}
+        <hr/>
+        {{with ""}}
+        <div>看一下现在的数据是：{{.}}</div>
+        {{else}}
+        <div>数据没有被替换，还是：{{.}}</div>
+        {{end}}
+
+    </body>
+</html>
